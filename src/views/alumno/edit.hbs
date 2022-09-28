@@ -1,0 +1,29 @@
+
+<div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-lg text-gray-800">
+
+  <h1 class="text-center text-3xl font-bold">Editar Alumno</h1>
+
+  {{#each alumnos}}
+  <form action="" method="POST" class="mt-4"> <!-- formulario donde se cargan los campos de alumno a partir del id-->
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Nombre/s" name="nombre" value="{{nombre}}">
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Apellido/s" name="apellido" value="{{apellido}}">
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Dni sin los puntos" name="dni" value="{{dni}}">
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 p-2 my-2 focus:bg-white" placeholder="Libreta Universitaria" name="lu" value="{{lu}}">
+
+    <textarea class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white h-40" placeholder="Observaciones" name="obs">{{obs}}</textarea>
+
+    <button type="submit" class="rounded-md bg-pink-500 w-full text-lg text-white font-semibold p-2 my-3 hover:bg-pink-600 focus:bg-green-700">Grabar Cambios</button>
+
+  </form>
+  {{/each}}
+
+</div>
+</div>
+ <div class="text-center w-full my-16">
+  <a href="/" class=" nav-link bg-pink-400 font-semibold border-2 border-black hover:text-pink-700 hover:bg-white py-3 px-4 rounded-md">PCyP - Inicio</a>
+ </div>

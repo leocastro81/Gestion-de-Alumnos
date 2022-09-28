@@ -1,0 +1,48 @@
+<div class=" mx-auto  p-14 bg-black w-1/4"><img src="./images/logo1.png" width="500" alt="logo"></div>
+
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+
+    <table class="table-fixed w-full">
+      <thead>
+        <tr class="bg-pink-400 text-white">
+          <th class="w-20 py-4 ...">ID</th>
+          <th class="w-1/4 py-4 ...">Nombre</th>
+          <th class="w-1/2 py-4 ...">Apellido</th>
+          <th class="w-1/2 py-4 ...">DNI/th>
+          <th class="w-1/2 py-4 ...">LU</th>
+          <th class="w-1/2 py-4 ...">Obs</th>
+          <th class="w-28 py-4 ...">Actiones</th> 
+        </tr>
+      </thead>
+      <tbody>
+        {{#each alumnos}} <!-- toma los registros de la tabla alumnos y los lista -->
+        <tr class="bg-gray-200">
+          <td class="py-3 px-6 ">{{id}}</td>
+          <td class="p-3">{{nombre}}</td>
+          <td class="p-3 text-center">{{apellido}}</td> 
+          <td class="p-3 text-center">{{dni}}</td>
+          <td class="p-3 text-center">{{lu}}</td>
+          <td class="p-3 text-center">{{obs}}</td>
+          <td class="p-3 flex">
+            <form action="/alumno/delete" method="POST" class="mx-2">  
+              <input type="hidden" value="{{id}}" name="id">
+              <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                <i class="fas fa-trash"></i></button>
+            </form>
+            <a href="/alumno/edit/{{id}}" class="bg-pink-300 text-white px-3 py-1 rounded-sm">  
+              <i class="fas fa-pen"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+ </div>
+ <br>
+ <div class="text-center w-full my-16">
+  <a href="/create" class=" nav-link bg-pink-400 font-semibold border-2 border-black hover:text-pink-700 hover:bg-white py-3 px-4 rounded-md">Agregar Alumno</a>
+ </div>
+ <div class="text-center w-full my-16">
+  <a href="/" class=" nav-link bg-pink-400 font-semibold border-2 border-black hover:text-pink-700 hover:bg-white py-3 px-4 rounded-md">PCyP - Inicio</a>
+ </div>
